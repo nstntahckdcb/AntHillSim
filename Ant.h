@@ -1,27 +1,18 @@
+// Ant.h
 #ifndef ANT_H
 #define ANT_H
 
+class Ant {
+public:
+    int id;
+    int health;
+    int x, y; // Position of the ant
+    bool searchingForFood;
 
-class Ant{
-        private:
-                int x;
-                int y;
-  		int id_number;
-		int experience;
-                int MAX_X;
-		int MAX_Y;
-        public:
-                Ant(int id);
-		Ant(const Ant&);
-                void move();
-		int getMax_X(){return MAX_X;};
-		int getMax_Y(){return MAX_Y;};
-                int getID(){return id_number;};
-                int getX(){return x;};
-                int getY(){return y;};
-		bool fight(Ant*);
-		int getExperience(){return experience;};
-		int setExperience(int exp){experience = exp;};
+    Ant(int id);
+    void move(); // Move randomly on the grid
+    void fight(Ant &other); // Fight another ant
+    bool isAlive(); // Check if the ant is still alive
 };
 
-#endif
+#endif // ANT_H

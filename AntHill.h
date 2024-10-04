@@ -1,4 +1,3 @@
-// AntHill.h
 #ifndef ANTHILL_H
 #define ANTHILL_H
 
@@ -7,7 +6,8 @@
 
 class AntHill {
 private:
-    LinkedList<Ant> ants;
+    LinkedList ants;  // Remove template usage
+
 public:
     AntHill(int numAnts);
     void simulateStep(); // Simulate one step of the simulation
